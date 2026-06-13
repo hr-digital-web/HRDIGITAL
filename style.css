@@ -1,0 +1,210 @@
+/* Fundo Degradê: Preto para Roxo Escuro */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #000000 0%, #15002b 50%, #0a0014 100%);
+    color: #e0e0e0;
+    min-height: 100vh;
+}
+
+/* Estrutura Central */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* =========================================
+   ÁREA DO CARTÃO DE VISITA (TOPO)
+========================================= */
+.business-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #05000a;
+    border: 2px solid #8a00e6;
+    border-radius: 10px;
+    padding: 35px 40px; /* Preenchimento levemente ajustado */
+    margin: 0 auto 30px auto; /* Centraliza o cartão e dá margem embaixo */
+    max-width: 650px; /* Define uma largura máxima menor para aproximar os itens */
+    gap: 30px;
+}
+
+.card-info {
+    text-align: left;
+    flex: 1;
+}
+
+.card-info h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+    margin: 0;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+.card-info h2 {
+    color: #d400ff;
+    font-size: 1.1em;
+    letter-spacing: 6px;
+    margin: 5px 0 30px 0;
+    text-align: left;
+}
+
+.contact-item {
+    margin-bottom: 15px;
+}
+
+.contact-item strong {
+    color: #ffffff;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+}
+
+.contact-item p {
+    color: #d400ff;
+    margin: 5px 0 0 0;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/* Imagem (Lado Direito) - Borda Removida */
+.card-image {
+    flex-shrink: 0;
+}
+
+.image-frame {
+    border: none;
+    padding: 0;
+    background: transparent;
+}
+
+.image-frame img {
+    display: block;
+    max-width: 180px; /* Ajuste leve no tamanho da logo para acompanhar a caixa menor */
+    width: 100%;
+}
+
+/* Título Secundário (Abaixo do Cartão) */
+.site-subtitle {
+    text-align: center;
+    color: #d400ff;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   SEÇÕES, TABELAS E BOTÕES 
+========================================= */
+h1, h2, h3 {
+    color: #d400ff;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* Caixas das Seções com Bordas Simples */
+.section {
+    background: rgba(20, 0, 40, 0.4); 
+    border: 1px solid #8a00e6;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(5px);
+}
+
+.section p {
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+/* Tabelas de Produtos e Kits */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(212, 0, 255, 0.3);
+    text-align: left;
+}
+
+th {
+    color: #d400ff;
+    font-size: 1.2em;
+}
+
+.price {
+    color: #d400ff;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: right;
+}
+
+.kit-desc {
+    font-size: 0.85em;
+    color: #aaa;
+}
+
+/* Botões de Contato (Rodapé) */
+.contact-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.link-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 25px;
+    color: #fff;
+    background-color: #8a00e6;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: 1px solid #d400ff;
+}
+
+.link-btn:hover {
+    transform: scale(1.05);
+    background-color: #d400ff;
+}
+
+.link-btn.disabled {
+    background-color: #222;
+    color: #666;
+    border: 1px solid #444;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Responsividade (Para Celulares) */
+@media (max-width: 768px) {
+    .business-card {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 30px 20px;
+        max-width: 100%; /* No celular a caixa volta a preencher a tela */
+    }
+    
+    .card-info {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .card-info h1, .card-info h2 {
+        text-align: center;
+    }
+    
+    .image-frame img {
+        max-width: 150px;
+        margin: 0 auto;
+    }
+}
