@@ -39,11 +39,18 @@
         HR DIGITAL - DESIGN E ASSISTÊNCIA ONLINE
     </div>
 
-    <!-- Descrição / Portfólio -->
+    <!-- Descrição / Portfólio com Botão Ocultar/Exibir e Texto Justificado -->
     <div class="section">
         <h3>Portfólio & Sobre Mim</h3>
-        <p>Sou apaixonado por estética digital e trabalho para transformar ideias soltas em identidades visuais funcionais e atraentes. Meu foco é criar materiais para redes sociais e impressos de qualidade, garantindo que o seu projeto funcione perfeitamente tanto na tela (RGB) quanto no papel (CMYK).</p>
-        <p>Acredito que um design feito sob medida começa pela escuta: trabalho com muita pesquisa e análise de referências para entender o seu objetivo. Se o projeto é para um negócio, uso a sua logo como ponto de partida para refletir a verdadeira cara da marca. Se for para um evento, busco capturar o sentimento e o tema da ocasião no convite. E se você ainda não tem certeza do que quer, não se preocupe: crio modelos autorais e opções variadas para te guiar até o resultado ideal.</p>
+        
+        <div style="text-align: center;">
+            <button id="btnLeiaMais" class="link-btn" style="cursor: pointer; border: 1px solid #d400ff; font-family: inherit;" onclick="toggleTexto()">Ler Sobre Mim</button>
+        </div>
+
+        <div id="textoPortfolio" style="display: none; margin-top: 20px;">
+            <p style="text-align: justify;">Sou apaixonado por estética digital e trabalho para transformar ideias soltas em identidades visuais funcionais e atraentes. Meu foco é criar materiais para redes sociais e impressos de qualidade, garantindo que o seu projeto funcione perfeitamente tanto na tela (RGB) quanto no papel (CMYK).</p>
+            <p style="text-align: justify;">Acredito que um design feito sob medida começa pela escuta: trabalho com muita pesquisa e análise de referências para entender o seu objetivo. Se o projeto é para um negócio, uso a sua logo como ponto de partida para refletir a verdadeira cara da marca. Se for para um evento, busco capturar o sentimento e o tema da ocasião no convite. E se você ainda não tem certeza do que quer, não se preocupe: crio modelos autorais e opções variadas para te guiar até o resultado ideal.</p>
+        </div>
     </div>
 
     <!-- Produtos Individuais -->
@@ -94,10 +101,6 @@
                 <td>Post (Redes Sociais)</td>
                 <td class="price">R$ 15,00</td>
             </tr>
-            <tr>
-                <td>Mais produtos em breve</td>
-                <td class="price">Em breve</td>
-            </tr>
         </table>
     </div>
 
@@ -131,13 +134,6 @@
                 </td>
                 <td class="price">R$ 32,00</td>
             </tr>
-            <tr>
-                <td>
-                    <strong>Mais KITs em breve</strong><br>
-                    <span class="kit-desc">----------------------</span>
-                </td>
-                <td class="price">Em breve</td>
-            </tr>
         </table>
     </div>
 
@@ -153,6 +149,22 @@
     </div>
 
 </div>
+
+<!-- Script Simples para Exibir/Ocultar o Portfólio -->
+<script>
+    function toggleTexto() {
+        var texto = document.getElementById("textoPortfolio");
+        var botao = document.getElementById("btnLeiaMais");
+        
+        if (texto.style.display === "none") {
+            texto.style.display = "block";
+            botao.innerText = "Ocultar";
+        } else {
+            texto.style.display = "none";
+            botao.innerText = "Ler Sobre Mim";
+        }
+    }
+</script>
 
 </body>
 </html>
